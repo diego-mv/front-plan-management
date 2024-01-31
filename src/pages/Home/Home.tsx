@@ -7,9 +7,11 @@ import { useNavigate } from "react-router-dom";
 import { PRIVATE_ROUTES } from '../../AppRoutes';
 import imgMain from '../../assets/plan_carrera.jpg';
 import './Home.css';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const handleNavigateUsers = () => {
         navigate(PRIVATE_ROUTES.ADMIN_USERS);
@@ -31,28 +33,27 @@ const Home = () => {
             </Grid>
             <Grid item xs={6}>
                 <Card variant="outlined" className="card-home" onClick={handleNavigateUsers}>
-                    <h3><PeopleIcon style={{ verticalAlign: 'bottom' }} /> Administrar usuarios</h3>
+                    <h3><PeopleIcon style={{ verticalAlign: 'bottom' }} /> {t('home.manageUsers')}</h3>
                     <p>
-                        Gestiona la información de los usuarios, permitiendo crear, editar y eliminar perfiles, a
-                        sí como acceder a detalles individuales acerca de sus habilidades.
+                        {t('home.msgManageUsers')}
                     </p>
                     <span className="button-link"><ChevronRightIcon /></span>
                 </Card>
             </Grid>
             <Grid item xs={3}>
                 <Card variant="outlined" className="card-home" onClick={handleNavigateSearch}>
-                    <h3><PlagiarismIcon style={{ verticalAlign: 'bottom' }} /> Búsqueda</h3>
+                    <h3><PlagiarismIcon style={{ verticalAlign: 'bottom' }} /> {t('home.search')}</h3>
                     <p>
-                        Funcionalidades para buscar usuarios por distintos términos como su habilidad o nivel de habilidad.
+                        {t('home.msgSearch')}
                     </p>
                     <span className="button-link"><ChevronRightIcon /></span>
                 </Card>
             </Grid>
             <Grid item xs={3}>
                 <Card variant="outlined" className="card-home" onClick={handleNavigateSkills}>
-                    <h3><AutoAwesomeIcon style={{ verticalAlign: 'bottom' }} /> Administrar habilidades</h3>
+                    <h3><AutoAwesomeIcon style={{ verticalAlign: 'bottom' }} /> {t('home.manageSkills')}</h3>
                     <p>
-                        Realiza operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para las habilidades.
+                        {t('home.msgManageSkills')}
                     </p>
                     <span className="button-link"><ChevronRightIcon /></span>
                 </Card>

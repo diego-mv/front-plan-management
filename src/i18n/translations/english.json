@@ -1,0 +1,13 @@
+{
+    "login": "Login",
+    "password": "Password",
+    "msgLogin": "To access all features, you must log in.",
+    "careerPlanManager": "Career plans manager",
+    
+    "home.manageUsers": "Manage users",
+    "home.msgManageUsers": "Manage user information, allowing the creation, editing, and deletion of profiles, as well as accessing individual details about their skills.",
+    "home.search": "Search",
+    "home.msgSearch": "Features to search for users using different criteria such as their skill or skill level.",
+    "home.manageSkills": "Manage skills",
+    "home.msgManageSkills": "Perform CRUD operations (Create, Read, Update, Delete) for skills."
+}

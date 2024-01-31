@@ -1,0 +1,13 @@
+{
+    "login": "Iniciar sesión",
+    "password": "Contraseña",
+    "msgLogin": "Para acceder a todas las funcionalidades debes iniciar sesión.",
+    "careerPlanManager": "Gestor planes de carrera",
+
+    "home.manageUsers": "Administrar usuarios",
+    "home.msgManageUsers": "Gestiona la información de los usuarios, permitiendo crear, editar y eliminar perfiles, así como acceder a detalles individuales acerca de sus habilidades.",
+    "home.search": "Busqueda",
+    "home.msgSearch": "Funcionalidades para buscar usuarios por distintos términos como su habilidad o nivel de habilidad.",
+    "home.manageSkills": "Aministrar habilidades",
+    "home.msgManageSkills": "Realiza operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para las habilidades."
+}

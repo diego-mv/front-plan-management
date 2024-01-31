@@ -9,9 +9,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { PRIVATE_ROUTES, PUBLIC_ROUTES } from '../../AppRoutes';
+import LanguageSelector from '../../i18n/LanguageSelector';
 import { resetUser } from '../../redux/states/user/user.state';
 import { AppStore } from '../../redux/store';
 
@@ -20,6 +22,7 @@ const Header = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const { t } = useTranslation();
 
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -43,14 +46,16 @@ const Header = () => {
             <AppBar position="static" sx={{ padding: '0 5rem' }}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={handleNavigateHome}>
-                        <WorkspacesIcon fontSize='large' style={{ verticalAlign: 'bottom', color: '#e6af2e' }} /> Gestor planes de carrera
+                        <WorkspacesIcon fontSize='large' style={{ verticalAlign: 'bottom', color: '#e6af2e' }} /> {t('careerPlanManager')}
                     </Typography>
+                    <div>
+                        <LanguageSelector />
+                    </div>
                     {userState.email && (
                         <div>
                             <IconButton
                                 size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
+                                aria-controls="menu-user"
                                 aria-haspopup="true"
                                 onClick={handleMenu}
                                 color="inherit"
@@ -58,7 +63,7 @@ const Header = () => {
                                 <AccountCircle />
                             </IconButton>
                             <Menu
-                                id="menu-appbar"
+                                id="menu-user"
                                 anchorEl={anchorEl}
                                 anchorOrigin={{
                                     vertical: 'top',

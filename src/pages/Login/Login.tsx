@@ -16,6 +16,7 @@ import { AppStore } from "../../redux/store";
 import { login } from "../../services/auth/auth.service";
 import { SnackbarUtilities } from "../../utilities";
 import './Login.css';
+import { useTranslation } from 'react-i18next';
 
 export const Login = () => {
     const userState = useSelector((store: AppStore) => store.user);
@@ -24,6 +25,7 @@ export const Login = () => {
     const { loading, callEndpoint } = useFetchAndLoad();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const { i18n, t } = useTranslation()
 
     useEffect(() => {
         if (userState && userState.email) {
@@ -70,9 +72,9 @@ export const Login = () => {
         <LoadingWrapper loading={loading}>
             <div className="container-login">
                 <div className="card-login">
-                    <h2 className="title-login"><VpnKeyIcon fontSize="large" style={{ verticalAlign: 'middle' }} /> Iniciar sesión</h2>
+                    <h2 className="title-login"><VpnKeyIcon fontSize="large" style={{ verticalAlign: 'middle' }} /> {t('login')}</h2>
 
-                    <p className="text-login">Para acceder a todas las funcionalidades debes iniciar sesión</p>
+                    <p className="text-login">{t('msgLogin')}</p>
                     <Box
                         component="form"
                         className="form-container"
@@ -96,7 +98,7 @@ export const Login = () => {
                             type="password"
                             color="primary"
                             variant="outlined"
-                            label="Contraseña"
+                            label={t('password')}
                             value={password}
                             onChange={handlePassword}
                         ></TextField>
@@ -104,7 +106,7 @@ export const Login = () => {
                             className="btn-login"
                             variant="contained"
                             color="primary"
-                            onClick={handleClick}>Iniciar sesión</Button>
+                            onClick={handleClick}>{t('login')}</Button>
                     </Box>
                 </div>
             </div>

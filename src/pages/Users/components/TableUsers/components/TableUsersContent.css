@@ -1,0 +1,22 @@
+.btn-table-users.users-delete {
+    background: #f44336;
+    color: #fff;
+
+    &:disabled {
+        background: #e57373;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.btn-table-users.users-path {
+    margin-right: 1rem;
+    background: #191716;
+    color: #fff;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

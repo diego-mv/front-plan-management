@@ -1,0 +1,16 @@
+.footer {
+    padding-left: 6rem;
+    width: calc(100% - 6rem);
+    height: 60px;
+    background: #191716;
+    position: relative;
+    z-index: 100;
+    bottom: 0px;
+}
+
+.footer>.footer-text {
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}

@@ -1,0 +1,39 @@
+.logo-skill {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-logo {
+    background: #4d4a49;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.timeline-career {
+    transform: rotate(90deg);
+}
+
+.timelineContentContainer-career {
+    text-align: left;
+    
+}
+
+.rotate-text{
+    transform: rotate(-90deg);
+}
+
+.timelineContent-career {
+    display: inline-block;
+    transform: rotate(-90deg);
+    text-align: center;
+    min-width: 50;
+}
+
+.timelineIcon-career {
+    transform: rotate(-90deg);
+}

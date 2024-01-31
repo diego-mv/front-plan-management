@@ -1,0 +1,44 @@
+.container-userskill {
+    padding: 2rem;
+    padding-top: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.label-userskill {
+    display: block;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.button-userskill {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.select-userskill {
+    width: 100%;
+}
+
+.rating-userskill {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-userskill {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 56px;
+    border: 1px solid gray;
+    border-radius: 4px;
+
+    &::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        padding-right: 1rem;
+    }
+}

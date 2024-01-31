@@ -1,0 +1,56 @@
+.card-home {
+    min-height: 10rem;
+    padding: 0 2rem 1rem 2rem;
+    background: #191716;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+        color: #dbdbdb;
+        background: #302d2c;
+    }
+}
+
+.card-home h3 {
+    color: #e6af2e;
+    font-weight: 600;
+}
+
+.button-link {
+    float: inline-end;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-img {
+    max-height: 25rem;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border-radius: 20px;
+
+    &:hover{
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    }
+}
+
+.img-main {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}

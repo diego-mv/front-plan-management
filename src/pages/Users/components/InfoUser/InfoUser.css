@@ -1,0 +1,11 @@
+.container-info-user {
+    display: block;
+    border-left: 1px solid gray;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container-info-user > .image-profile > img{
+    width: 150px;
+}

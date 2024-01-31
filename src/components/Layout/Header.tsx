@@ -42,8 +42,8 @@ const Header = () => {
     }
 
     return (
-        <Box sx={{ flexGrow: 1, margin: 0 }}>
-            <AppBar position="static" sx={{ padding: '0 5rem' }}>
+        <Box sx={{ flexGrow: 1, margin: 0, background: '#191716' }}>
+            <AppBar position="static" className='container-header' sx={{ padding: '0 5rem' }}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={handleNavigateHome}>
                         <WorkspacesIcon fontSize='large' style={{ verticalAlign: 'bottom', color: '#e6af2e' }} /> {t('careerPlanManager')}

@@ -17,6 +17,7 @@ import { login } from "../../services/auth/auth.service";
 import { SnackbarUtilities } from "../../utilities";
 import './Login.css';
 import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../i18n/LanguageSelector';
 
 export const Login = () => {
     const userState = useSelector((store: AppStore) => store.user);
@@ -79,6 +80,7 @@ export const Login = () => {
                         component="form"
                         className="form-container"
                         autoComplete="on"
+
                     >
                         <TextField
                             className="input-login"
@@ -103,12 +105,15 @@ export const Login = () => {
                             onChange={handlePassword}
                         ></TextField>
                         <Button
+                            type="submit"
                             className="btn-login"
                             variant="contained"
                             color="primary"
                             onClick={handleClick}>{t('login')}</Button>
                     </Box>
                 </div>
+
+                <div className='container-lang-select'><LanguageSelector /></div>
             </div>
         </LoadingWrapper>
     )

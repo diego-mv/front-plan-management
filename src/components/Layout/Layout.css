@@ -1,4 +1,13 @@
 .content-page {
     padding: 1rem 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
     min-height: calc(100vh - 124px);
+}
+
+.container-header{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
 }

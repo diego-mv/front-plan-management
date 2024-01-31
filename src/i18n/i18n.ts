@@ -6,7 +6,7 @@ import ptTranslations from './translations/portuguese.json';
 
 i18n.use(initReactI18next)
     .init({
-        lng: 'en',
+        lng: 'es',
         fallbackLng: 'es',
         interpolation: {
             escapeValue: false

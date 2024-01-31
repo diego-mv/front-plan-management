@@ -31,7 +31,7 @@ const Home = () => {
                 <div className="dark-overlay"></div>
                 <img src={imgMain} className="img-main" />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
                 <Card variant="outlined" className="card-home" onClick={handleNavigateUsers}>
                     <h3><PeopleIcon style={{ verticalAlign: 'bottom' }} /> {t('home.manageUsers')}</h3>
                     <p>
@@ -40,7 +40,7 @@ const Home = () => {
                     <span className="button-link"><ChevronRightIcon /></span>
                 </Card>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
                 <Card variant="outlined" className="card-home" onClick={handleNavigateSearch}>
                     <h3><PlagiarismIcon style={{ verticalAlign: 'bottom' }} /> {t('home.search')}</h3>
                     <p>
@@ -49,7 +49,7 @@ const Home = () => {
                     <span className="button-link"><ChevronRightIcon /></span>
                 </Card>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
                 <Card variant="outlined" className="card-home" onClick={handleNavigateSkills}>
                     <h3><AutoAwesomeIcon style={{ verticalAlign: 'bottom' }} /> {t('home.manageSkills')}</h3>
                     <p>

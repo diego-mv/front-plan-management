@@ -3,11 +3,13 @@ import './Footer.css';
 
 const Footer = () => {
     const { t } = useTranslation();
-    
+
     return (
+
         <div className="footer">
-            <p className='footer-text'>{t('careerPlanManager')}®</p>
-        </div>
+            <div className='container-footer'>
+                <p className='footer-text'>{t('careerPlanManager')}®</p>
+            </div></div>
     )
 }
 

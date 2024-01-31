@@ -1,7 +1,7 @@
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import PeopleIcon from '@mui/icons-material/People';
-import RouteIcon from '@mui/icons-material/Route';
+import PlagiarismIcon from '@mui/icons-material/Plagiarism';
 import { Card, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { PRIVATE_ROUTES } from '../../AppRoutes';
@@ -18,8 +18,8 @@ const Home = () => {
     const handleNavigateSkills = () => {
         navigate(PRIVATE_ROUTES.ADMIN_SKILLS);
     };
-    const handleNavigateCareerPlan = () => {
-        navigate(PRIVATE_ROUTES.CAREER_PLAN);
+    const handleNavigateSearch = () => {
+        navigate(PRIVATE_ROUTES.SEARCH);
     };
 
 
@@ -40,10 +40,10 @@ const Home = () => {
                 </Card>
             </Grid>
             <Grid item xs={3}>
-                <Card variant="outlined" className="card-home" onClick={handleNavigateCareerPlan}>
-                    <h3><RouteIcon style={{ verticalAlign: 'bottom' }} /> Administrar planes de carrera</h3>
+                <Card variant="outlined" className="card-home" onClick={handleNavigateSearch}>
+                    <h3><PlagiarismIcon style={{ verticalAlign: 'bottom' }} /> Búsqueda</h3>
                     <p>
-                        Crea, edita o elimina los distintos planes de carrera disponibles para tus usuarios.
+                        Funcionalidades para buscar usuarios por distintos términos como su habilidad o nivel de habilidad.
                     </p>
                     <span className="button-link"><ChevronRightIcon /></span>
                 </Card>

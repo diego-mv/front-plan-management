@@ -7,6 +7,22 @@ import { User } from "../../models/users/user.model";
 import axios from '../../utilities/axios.utility';
 
 export class UsersService {
+
+    public searchUsers = async (userData: string | null, skillId: string | null, level: string | null): Promise<User[]> => {
+        try {
+            const response = await axios.get(`/users/searchUsers?userData=${userData}&skillId=${skillId}&level=${level}`);
+
+            const users: User[] = [];
+            (response.data as UserDto[]).map(user => {
+                users.push(userAdapter(user)!);
+            });
+
+            return users;
+        } catch (error) {
+            throw error;
+        }
+    }
+
     public getAllUsers = async (page: number, rowsPerPage: number): Promise<ResultPage<User>> => {
         try {
             const response = await axios.get(`/users/getAll?page=${page}&size=${rowsPerPage}`);

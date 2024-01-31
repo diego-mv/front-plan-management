@@ -2,9 +2,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import RouteIcon from '@mui/icons-material/Route';
 import { IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@mui/material';
 import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { User } from '../../../../../models/users/user.model';
 import { AppStore } from '../../../../../redux/store';
-import { useSelector } from 'react-redux';
 import './TableUsersContent.css';
 
 interface Props {
@@ -46,6 +46,16 @@ const TableUsersContent: FC<Props> = ({
                     </TableRow>
                 </TableHead>
                 <TableBody>
+                    {
+                        !users || users.length === 0 &&
+                        (
+                            <TableRow>
+                                <TableCell colSpan={4}>
+                                    <p className='empty-message'>No se han encontrado resultados</p>
+                                </TableCell>
+                            </TableRow>
+                        )
+                    }
                     {
                         users.map((user) => (
                             <TableRow

@@ -18,43 +18,45 @@ interface Props {
 
 const CareerPlan: FC<Props> = ({ skills }) => {
     const [userSkills, setUserSkills] = useState<UserSkill[]>([]);
-    
+
     useEffect(() => {
         setUserSkills(sortByDate(skills, 'learningDate'));
     }, [skills])
 
     return (
-        <Timeline position="alternate">
+        <div className='container-timeline-career'>
+            <Timeline position="alternate" >
 
-            {
-                userSkills.map(skill => (
-                    <TimelineItem key={skill.id + skill.level}>
-                        <TimelineOppositeContent
-                            sx={{ m: 'auto 0' }}
-                            align="right"
-                            variant="body2"
-                            color="text.secondary"
-                        >
-                            {FormatDate(skill.learningDate)}
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot className='container-logo'>
-                                <img className="logo-skill" src={skill.url} />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12px', px: 2 }}>
-                            <Typography variant="h6" component="span">
-                                {skill.description}
-                            </Typography>
-                            <Typography> Nivel {skill.level}</Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                ))
-            }
+                {
+                    userSkills.map(skill => (
+                        <TimelineItem key={skill.id + skill.level}>
+                            <TimelineOppositeContent
+                                sx={{ m: 'auto 0' }}
+                                align="right"
+                                variant="body2"
+                                color="text.secondary"
+                            >
+                                {FormatDate(skill.learningDate)}
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <TimelineConnector />
+                                <TimelineDot className='container-logo'>
+                                    <img className="logo-skill" src={skill.url} />
+                                </TimelineDot>
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent sx={{ py: '12px', px: 2 }}>
+                                <Typography variant="h6" component="span">
+                                    {skill.description}
+                                </Typography>
+                                <Typography> Nivel {skill.level}</Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                    ))
+                }
 
-        </Timeline>
+            </Timeline>
+        </div>
     )
 }
 

@@ -3,11 +3,11 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import PeopleIcon from '@mui/icons-material/People';
 import PlagiarismIcon from '@mui/icons-material/Plagiarism';
 import { Card, Grid } from "@mui/material";
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from "react-router-dom";
 import { PRIVATE_ROUTES } from '../../AppRoutes';
 import imgMain from '../../assets/plan_carrera.jpg';
 import './Home.css';
-import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const navigate = useNavigate();

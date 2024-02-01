@@ -7,24 +7,27 @@ import './Skills.css';
 import CreateSkill from './components/Create/CreateSkill';
 import TableSkills from './components/TableSkills/TableSkills';
 import { SkillProvider } from './contexts/SkillContext';
+import { useTranslation } from 'react-i18next';
 
-const Skills = () => {
-  const breadItems: BreadCrumbItem[] = [
-    {
-      label: 'Home',
-      url: PRIVATE_ROUTES.HOME
-    },
-    {
-      label: 'Habilidades',
-      url: PRIVATE_ROUTES.ADMIN_SKILLS,
-      active: true
-    },
-  ];
+const breadItems: BreadCrumbItem[] = [
+  {
+    label: 'Home',
+    url: PRIVATE_ROUTES.HOME
+  },
+  {
+    label: 'Habilidades',
+    url: PRIVATE_ROUTES.ADMIN_SKILLS,
+    active: true
+  },
+];
+
+const Skills = () => {  
+  const { t } = useTranslation();
 
   return (
     <div className="container">
       <Breadcrumb items={breadItems} />
-      <h2 className="title"><AutoAwesomeIcon /> Habilidades</h2>
+      <h2 className="title"><AutoAwesomeIcon /> {t('skills')}</h2>
       <div className="content-skills">
         <SkillProvider
           skills={[]}

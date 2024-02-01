@@ -49,7 +49,7 @@ const AppRoutes = () => {
                                 ><Search />
                                 </SearchUsersProvider>
                             </Layout>} />
-                </Route>
+                    </Route>
             </Routes >
         </BrowserRouter >
     );

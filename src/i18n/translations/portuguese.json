@@ -9,5 +9,8 @@
     "home.search": "Busca",
     "home.msgSearch": "Recursos para buscar usuários usando diferentes critérios, como sua habilidade ou nível de habilidade.",
     "home.manageSkills": "Gerenciar habilidades",
-    "home.msgManageSkills": "Realizar operações CRUD (Criar, Ler, Atualizar, Excluir) para habilidades."
+    "home.msgManageSkills": "Realizar operações CRUD (Criar, Ler, Atualizar, Excluir) para habilidades.",
+
+    "skills": "Habilidades",
+    "advancedSearches": "Pesquisas avançadas"
 }

@@ -9,5 +9,8 @@
     "home.search": "Search",
     "home.msgSearch": "Features to search for users using different criteria such as their skill or skill level.",
     "home.manageSkills": "Manage skills",
-    "home.msgManageSkills": "Perform CRUD operations (Create, Read, Update, Delete) for skills."
+    "home.msgManageSkills": "Perform CRUD operations (Create, Read, Update, Delete) for skills.",
+
+    "skills": "Skills",
+    "advancedSearches": "Advanced searches"
 }

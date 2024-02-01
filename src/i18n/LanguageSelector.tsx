@@ -6,7 +6,7 @@ import { LANGUAGES } from '../utilities/enums/languages.enum';
 const LanguageSelector = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
-    const { i18n, t } = useTranslation();
+    const { i18n } = useTranslation();
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -33,7 +33,7 @@ const LanguageSelector = () => {
                 onClick={handleClick}
             >
                 {
-                    LANGUAGES.find(l => l.code === i18n.language)?.label
+                    LANGUAGES.find(l => l.code === i18n.language)?.label ?? ""
                 }
             </Button>
             <Menu

@@ -9,9 +9,8 @@ import { SnackbarUtilities } from "../../../../utilities";
 import { CareerPlanUserProvider } from '../../contexts/CareerPlanUserContext';
 import { useUsersContext } from "../../contexts/UsersContext";
 import UserCareer from '../ModalUserCareer/ModalUserCareer';
+import './TableUsers.css';
 import TableUsersContent from "./components/TableUsersContent";
-
-
 
 const TableUsers = () => {
 
@@ -28,7 +27,7 @@ const TableUsers = () => {
         handleChangePage,
         handleChangeRowPerPage,
         updateTotal } = usePagination({ initSize: 3 });
-    const { signal } = useUsersContext();
+    const { signal, sendSignal } = useUsersContext();
     const userService = new UsersService();
 
     useEffect(() => {
@@ -68,7 +67,7 @@ const TableUsers = () => {
 
             if (userDeleted) {
                 SnackbarUtilities.success('El usuario ha sido eliminado');
-                removeUsers(userToDelete!);
+                sendSignal();
                 setUserToDelete(null);
             }
 

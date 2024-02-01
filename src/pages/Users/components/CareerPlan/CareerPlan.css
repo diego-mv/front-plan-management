@@ -20,10 +20,10 @@
 
 .timelineContentContainer-career {
     text-align: left;
-    
+
 }
 
-.rotate-text{
+.rotate-text {
     transform: rotate(-90deg);
 }
 
@@ -36,4 +36,13 @@
 
 .timelineIcon-career {
     transform: rotate(-90deg);
+}
+
+.container-timeline-career {
+    width: 400px;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
 }

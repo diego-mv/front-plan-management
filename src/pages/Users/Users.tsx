@@ -8,9 +8,11 @@ import Breadcrumb from "../../components/Breadcrumb"
 import { useState } from "react"
 import './Users.css';
 import DashboardUsers from "./components/DashboardUsers/DashboardUsers"
+import { useTranslation } from "react-i18next"
 
 const Users = () => {
   const [openCreate, setOpenCreate] = useState(false);
+  const { t } = useTranslation();
   const breadItems: BreadCrumbItem[] = [
     {
       label: 'Home',
@@ -34,7 +36,7 @@ const Users = () => {
   return (
     <div className="container">
       <Breadcrumb items={breadItems} />
-      <h2 className="title">Administración de usuarios</h2>
+      <h2 className="title">{ t('home.manageUsers')}</h2>
       <div className="content-users">
         <DashboardUsers />
         <Button

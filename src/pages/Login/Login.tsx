@@ -26,7 +26,7 @@ export const Login = () => {
     const { loading, callEndpoint } = useFetchAndLoad();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { i18n, t } = useTranslation()
+    const {  t } = useTranslation()
 
     useEffect(() => {
         if (userState && userState.email) {

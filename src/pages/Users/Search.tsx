@@ -4,6 +4,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import { BreadCrumbItem } from "../../models/common/breadcrumbItem.model";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { User } from "../../models/users/user.model";
 import { SkillService } from "../../services/skills/skills.service";
 import { UsersService } from "../../services/users/users.service";
@@ -32,7 +33,7 @@ const Search = () => {
     const [usersResult, setUsersResult] = useState<User[]>([]);
     const [openCareer, setOpenCareer] = useState(false);
     const [userIdSelected, setUserIdSelected] = useState<number | null>(null);
-
+    const { t } = useTranslation();
     const skillService = new SkillService();
     const userService = new UsersService();
 
@@ -77,7 +78,7 @@ const Search = () => {
     return (
         <div className="container">
             <Breadcrumb items={breadItems} />
-            <h2 className="title">Busquedas avanzadas</h2>
+            <h2 className="title">{t('advancedSearches')}</h2>
 
             <div className="content-search">
                 <Grid container  >
